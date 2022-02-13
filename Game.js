@@ -57,7 +57,7 @@ class Game {
         if (this.revealWord === this.word) {
             return this.endGame('w')
         }
-        if (this.guessesLeft < 0) {
+        if (this.guessesLeft <= 0) {
             return this.endGame('l')
         }
     }
@@ -79,7 +79,7 @@ class Game {
     newGame() {
         document.getElementById('playerArea').innerHTML = `<input type="text" id="guess" placeholder="guess the word"/>
         <input type="button" id="submitGuess" value="Final answer!" />
-        <div id="guessCount"></div>`;
+        <div id="guessCount"></div><div id="letters"></div>`;
         document.getElementById('outcome').style.display = "none";
         this.play()
     }
