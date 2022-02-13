@@ -6,6 +6,6 @@ class Guess {
 
     makeAButton(letterValue){
         let ltr = String.fromCharCode(letterValue)
-        document.getElementById('playerArea').insertAdjacentHTML('beforeend', `<input type="button" id="${ltr}" class="guess" value="${ltr}"/>`)
+        document.getElementById('letters').insertAdjacentHTML('beforeend', `<input type="button" id="${ltr}" class="guess" value="${ltr}"/>`)
     }
 }
