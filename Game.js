@@ -9,7 +9,6 @@ class Game {
         this.revealWord = this.word;
         this.guessesLeft = 6;
         this.setupGame();
-        console.log(this.word)
     }
 
     getRandomWord() {
