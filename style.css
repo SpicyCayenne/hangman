@@ -1,0 +1,36 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#game div {
+    padding: 1em;
+}
+
+#secretWord {
+    font-size: 5vw;
+    letter-spacing: 0.5em;
+}
+
+#outcome {
+    position: absolute;
+    padding: 3em;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0;
+}
+
+#outcome input {
+    margin: 1em;
+}

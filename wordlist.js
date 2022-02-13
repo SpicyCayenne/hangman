@@ -1,5 +1,5 @@
 let wordList = [
-    // Borrowed from https://github.com/apostrophecms/random-words who borroed it from xkcd password generator which borrowed it from wherever
+    // Borrowed from https://github.com/apostrophecms/random-words who borrowed it from xkcd password generator which borrowed it from wherever
     // I couldn't figure out how to use the whole package so i just borrowed the list of words
     "ability","able","aboard","about","above","accept","accident","according",
     "account","accurate","acres","across","act","action","active","activity",
@@ -246,9 +246,3 @@ let wordList = [
     "year","yellow","yes","yesterday","yet","you","young","younger",
     "your","yourself","youth","zero","zebra","zipper","zoo","zulu"
   ];
-
-  function getRandomWord() {
-    let numWords = wordList.length-1;
-    let randInt = Math.round(Math.random()*numWords);
-    return wordList[randInt]
-  }

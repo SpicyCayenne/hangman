@@ -5,9 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hangman</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+    <div id="game">
+        <div id="secretWord"></div>
+        <div id="playerArea">
+            <input type="text" id="guess" placeholder="guess the word"/>
+            <input type="button" id="submitGuess" value="Final answer!" />
+            <div id="guessCount"></div>
+        </div>
+    </div>
+    <div id="outcome"></div>
     <script type="text/javascript" src="wordlist.js"></script>
+    <script type="text/javascript" src="Guess.js"></script>
     <script type="text/javascript" src="Game.js"></script>
     <script type="text/javascript" src="script.js"></script>
 </body>
