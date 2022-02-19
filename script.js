@@ -1,6 +1,6 @@
 import {
     words
-} from '/node_modules/random-words/index.js'
+} from './node_modules/random-words/index.js'
 import {
     Game
 } from './Game.js'
