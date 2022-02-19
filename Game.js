@@ -1,4 +1,4 @@
-import words from "./node_modules/random-words/index.js";
+import words from "./tree/rw-test/node_modules/random-words/index.js";
 import Guess from './Guess.js'
 
 class Game {
