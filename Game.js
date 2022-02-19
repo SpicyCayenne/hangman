@@ -1,20 +1,24 @@
+import words from "/node_modules/random-words/index.js";
+import Guess from './Guess.js'
+
 class Game {
+
     constructor() {
         this.word;
         this.revealWord = '';
+
     }
 
     play() {
         this.word = this.getRandomWord();
+        console.log(this.word)
         this.revealWord = this.word;
         this.guessesLeft = 6;
         this.setupGame();
     }
 
     getRandomWord() {
-        let numWords = wordList.length-1;
-        let randInt = Math.round(Math.random()*numWords);
-        return wordList[randInt]
+        return words()
     }
 
     guessWord() {
@@ -29,8 +33,8 @@ class Game {
 
     guessLetter(letter) {
         let btn = document.getElementById(`${letter}`)
-        if (this.word.indexOf(letter) === -1 ) {
-            btn.style.background  = "red"
+        if (this.word.indexOf(letter) === -1) {
+            btn.style.background = "red"
             this.guessesLeft--;
         }
         this.updateHiddenWord(letter);
@@ -52,7 +56,7 @@ class Game {
             } else {
                 this.revealWord += knownLetters[letter]
             }
-        }   
+        }
         document.getElementById('secretWord').innerText = this.revealWord;
         if (this.revealWord === this.word) {
             return this.endGame('w')
@@ -73,7 +77,9 @@ class Game {
             result.innerText = `You lose :( the word was ${this.word.toUpperCase()}`
         }
         result.insertAdjacentHTML('beforeend', `<input type="button" id="playAgain" value="Play Again" />`)
-        document.getElementById('playAgain').addEventListener('click', () => {this.newGame()})
+        document.getElementById('playAgain').addEventListener('click', () => {
+            this.newGame()
+        })
     }
 
     newGame() {
@@ -86,12 +92,18 @@ class Game {
 
     setupGame() {
         this.updateHiddenWord()
-        for (let i = 0; i<26; i++) {
+        for (let i = 0; i < 26; i++) {
             new Guess(i);
             document.getElementById(`${String.fromCharCode(i+97)}`).addEventListener('click', () => {
                 this.guessLetter(`${String.fromCharCode(i+97)}`);
             })
         }
-        document.getElementById('submitGuess').addEventListener('click', () => {this.guessWord()})
+        document.getElementById('submitGuess').addEventListener('click', () => {
+            this.guessWord()
+        })
     }
+}
+
+export {
+    Game
 }

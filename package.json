@@ -1,0 +1,22 @@
+{
+  "name": "hangman",
+  "version": "1.0.0",
+  "description": "simple hangman game",
+  "main": "Game.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SpicyCayenne/hangman.git"
+  },
+  "author": "spicycayenne",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SpicyCayenne/hangman/issues"
+  },
+  "homepage": "https://github.com/SpicyCayenne/hangman#readme",
+  "dependencies": {
+    "random-words": "^1.1.2"
+  }
+}
